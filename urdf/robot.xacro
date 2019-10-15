@@ -89,8 +89,10 @@ meshes="package://gazebo_plugins/test/multi_robot_scenario/meshes/laser" />
         </geometry> 
     </collision>
   </link>-->
+
 <!-- Include the XACRO file that defines a Hokuyo LIDAR. -->
 <xacro:include filename="$(find velodyne_description)/urdf/VLP-16.urdf.xacro"/>
+
 <!-- Invoke the macro to define the Hokuyo LIDAR.-->
 <VLP-16 parent="base" name="laser_horiz" topic="laser_horiz/packets" hz="10"
 samples="440" gpu="false">
